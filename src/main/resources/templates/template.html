@@ -1,0 +1,335 @@
+<!-- HEAD -->
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link th:href="@{/css/sb-admin-2.min.css}" rel="stylesheet">
+
+
+<!-- CSS -->
+
+<style>
+  .modal-title {
+    position: relative;
+    text-align: center;
+  }
+
+  .modal-footer {
+    text-align: center;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  table{
+    margin: 0 auto;
+    width: 100%;
+    clear: both;
+    border-collapse: collapse;
+    table-layout: fixed; // ***********add this
+    word-wrap:break-word; // ***********and this
+  }
+
+</style>
+
+
+<!-- SIDEBAR -->
+<body id="page-top">
+  <div id="wrapper">
+  
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" style="color:white">
+        <div class="sidebar-brand-text mx-3"><sup> RE</sup>SISMIOP</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href=" ">
+          <i class="fa fa-area-chart"></i>
+          <span>Dashboard</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+          Menu
+        </div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item active">
+          <a class="nav-link" href="/mutasi">
+            <i class="fa fa-clipboard"></i>
+            <span>Mutasi</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/rekonsiliasi">
+              <i class="fa fa-file-text"></i>
+              <span>Rekonsiliasi</span></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/killpop">
+                <i class="fa fa-plus"></i>
+                <span>SPOP LSPOP</span></a>
+              </li>
+
+
+              <!-- Divider -->
+              <hr class="sidebar-divider">
+
+                        </ul>
+
+	<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="minimize" style="width:2% !important">
+
+      <i class="fa fa-bars"  style="color:white; vertical-align: middle; line-height: 90px; margin-left:3px;" ></i>
+   </ul>
+
+                         <div id="content-wrapper" class="d-flex flex-column">
+
+                          <!-- Main Content -->
+                          <div id="content">
+
+                            <!-- Topbar -->
+                            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                              <!-- Sidebar Toggle (Topbar) -->
+                              <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                                <i class="fa fa-bars"></i>
+                              </button>
+
+
+
+                              <!-- Topbar Navbar -->
+                              <ul class="navbar-nav ml-auto">
+
+                                <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                                <li class="nav-item dropdown no-arrow d-sm-none">
+                                  <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-search fa-fw"></i>
+                                  </a>
+                                  <!-- Dropdown - Messages -->
+                                  <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                    <form class="form-inline mr-auto w-100 navbar-search">
+                                      <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                          <button class="btn btn-primary" type="button">
+                                            <i class="fas fa-search fa-sm"></i>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </li>
+
+                                <!-- Nav Item - Alerts -->
+                                <li class="nav-item dropdown no-arrow mx-1">
+                                  
+                                </li>
+
+
+
+                              
+
+                                <!-- Nav Item - User Information -->
+                                <li class="nav-item dropdown no-arrow">
+                                  <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle-o"></i>
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small" th:text="Admin"></span>
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small" href="/logout" th:text="  Logout"></span>
+                                  </a>
+                                  <!-- Dropdown - User Information -->
+                                  
+                                  </div>
+                                </li>
+
+                              </ul>
+
+                            </nav>
+                            <!-- End of Topbar -->
+
+                            <!-- Begin Page Content -->
+                            <div class="container-fluid">
+                            
+                            <!-- di bawah ga dipake, apus aja -->
+                              <div class="row">
+
+                                <!-- Earnings (Monthly) Card Example -->
+                                <div class="col-xl-3 col-md-6 mb-4">
+                                  <div class="card border-left-primary shadow h-100 py-2">
+                                    <div class="card-body">
+                                      <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Dash 1</div>
+                                          <div class="h5 mb-0 font-weight-bold text-gray-800" th:text="tes"></div>
+                                        </div>
+                                        <div class="col-auto">
+                                          <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Earnings (Monthly) Card Example -->
+                                <div class="col-xl-3 col-md-6 mb-4">
+                                  <div class="card border-left-success shadow h-100 py-2">
+                                    <div class="card-body">
+                                      <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Earnings (Annual)</div>
+                                          <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                        </div>
+                                        <div class="col-auto">
+                                          <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Earnings (Monthly) Card Example -->
+                                <div class="col-xl-3 col-md-6 mb-4">
+                                  <div class="card border-left-info shadow h-100 py-2">
+                                    <div class="card-body">
+                                      <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
+                                          <div class="row no-gutters align-items-center">
+                                            <div class="col-auto">
+                                              <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                            </div>
+                                            <div class="col">
+                                              <div class="progress progress-sm mr-2">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-auto">
+                                          <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Pending Requests Card Example -->
+                                <div class="col-xl-3 col-md-6 mb-4">
+                                  <div class="card border-left-warning shadow h-100 py-2">
+                                    <div class="card-body">
+                                      <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Requests</div>
+                                          <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                        </div>
+                                        <div class="col-auto">
+                                          <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- di atas ga dipake, apus aja -->
+                              <!-- Content Row -->
+
+                              <div class="row">
+
+                                <!-- Area Chart -->
+                                <div class="col-md-12">
+                                  <div class="card shadow mb-4">
+                                    <!-- Card Header - Dropdown -->
+                                    <div class="card-header py-3">
+                                      <i class="fa fa-window-restore"></i>
+                                      <h6 style="display: inline-block;" class="m-0 font-weight-bold text-primary">&nbspCoba111</h6>
+                                      <div style="float: right; display: inline-block;" class="dropdown no-arrow">
+                                       
+
+                                      </div>
+                                    </div>
+                                    <!-- Card Body --> <!-- TODO DIISI -->
+                                    <div class="card-body">
+
+
+
+
+					</div>
+					<div class="col-sm-12"></div>
+			</form>
+
+                                      
+  </div>
+
+  <!-- Pie Chart -->
+
+</div>
+
+</div>
+   
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+   <!-- SCRIPTS -->
+
+<script type="text/javascript"
+src="/media/js/site.js?_=994321fabf3873df746bb8bbccd1886a"></script>
+<script type="text/javascript"
+src="/media/js/dynamic.php?comments-page=extensions%2Fbuttons%2Fexamples%2Fstyling%2Fbootstrap.html"
+async></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript"
+src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript"
+src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript"
+src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.bootstrap.min.js"></script>
+<script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script type="text/javascript"
+src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
+<script type="text/javascript"
+src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
+<script type="text/javascript"
+src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.colVis.min.js"></script>
+<script type="text/javascript"
+src="../../../../examples/resources/demo.js"></script>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script th:src="@{/js/sb-admin-2.min.js}"></script>
+<script type="text/javascript" class="init"></script>
+
+</body>
+
+<script>
+$("#minimize").unbind().click(function(){
+	$("#accordionSidebar").toggle();
+})
+
+//SCRIPT YANG LAIN
+
+
+
+</script>
